@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <Extern href="stdidcmd.h"/>
+  <Extern href="vsshlids.h"/>
+  <Include href="KnownImageIds.vsct"/>
+  <Include href="VSGlobals.vsct"/>
+
+  <Commands package="ThiefBook_Reforge">
+    <Groups>
+      <Group guid="ThiefBook_Reforge" id="MyMenuGroup" priority="0x0600">
+        <Parent guid="VSMainMenu" id="Tools"/>
+      </Group>
+    </Groups>
+
+    <!--This section defines the elements the user can interact with, like a menu command or a button
+        or combo box in a toolbar. -->
+    <Buttons>
+      <Button guid="ThiefBook_Reforge" id="HidePageCommand" priority="0x0100" type="Button">
+        <Parent guid="ThiefBook_Reforge" id="MyMenuGroup" />
+        <Icon guid="ImageCatalogGuid" id="MessageBubble" />
+        <CommandFlag>IconIsMoniker</CommandFlag>
+        <Strings>
+          <ButtonText>HidePage</ButtonText>
+          <LocCanonicalName>.ThiefBook_Reforge.HidePageCommand</LocCanonicalName>
+        </Strings>
+      </Button>
+		<Button guid="ThiefBook_Reforge" id="LastPageCommand" priority="0x0100" type="Button">
+			<Parent guid="ThiefBook_Reforge" id="MyMenuGroup" />
+			<Icon guid="ImageCatalogGuid" id="MessageBubble" />
+			<CommandFlag>IconIsMoniker</CommandFlag>
+			<Strings>
+				<ButtonText>LastPage</ButtonText>
+				<LocCanonicalName>.ThiefBook_Reforge.LastPageCommand</LocCanonicalName>
+			</Strings>
+		</Button>
+		<Button guid="ThiefBook_Reforge" id="NextPageCommand" priority="0x0100" type="Button">
+			<Parent guid="ThiefBook_Reforge" id="MyMenuGroup" />
+			<Icon guid="ImageCatalogGuid" id="MessageBubble" />
+			<CommandFlag>IconIsMoniker</CommandFlag>
+			<Strings>
+				<ButtonText>NextPage</ButtonText>
+				<LocCanonicalName>.ThiefBook_Reforge.NextPageCommand</LocCanonicalName>
+			</Strings>
+		</Button>
+    </Buttons>
+  </Commands>
+
+  <Symbols>
+    <GuidSymbol name="ThiefBook_Reforge" value="{b6b974e5-feec-4eb0-8413-cd39fec22b2c}">
+      <IDSymbol name="MyMenuGroup" value="0x0001" />
+      <IDSymbol name="HidePageCommand" value="0x0100" />
+	  <IDSymbol name="LastPageCommand" value="0x0101" />
+	  <IDSymbol name="NextPageCommand" value="0x0110" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>
